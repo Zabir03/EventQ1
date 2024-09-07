@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Event Examples</title>
+    <style>
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="button1" class="button">Button 1</button>
+    <button id="button2" class="button">Button 2</button>
+    <button id="button3" class="button">Button 3</button>
+
+    <script>
+        // Function to change button color on click
+        function handleClick(event) {
+            event.target.style.backgroundColor = 'lightblue';
+            alert('Button clicked!');
+        }
+
+        // Function to change button color on mouseover
+        function handleMouseOver(event) {
+            event.target.style.backgroundColor = 'lightgreen';
+        }
+
+        // Function to reset button color on mouseout
+        function handleMouseOut(event) {
+            event.target.style.backgroundColor = '';
+        }
+
+        // Function to hide button on double click
+        function handleDoubleClick(event) {
+            event.target.style.display = 'none';
+        }
+
+        // Get button elements
+        const button1 = document.getElementById('button1');
+        const button2 = document.getElementById('button2');
+        const button3 = document.getElementById('button3');
+
+        // Add event listeners
+        button1.addEventListener('click', handleClick);
+        button1.addEventListener('mouseover', handleMouseOver);
+        button1.addEventListener('mouseout', handleMouseOut);
+        button1.addEventListener('dblclick', handleDoubleClick);
+
+        button2.addEventListener('click', handleClick);
+        button2.addEventListener('mouseover', handleMouseOver);
+        button2.addEventListener('mouseout', handleMouseOut);
+        button2.addEventListener('dblclick', handleDoubleClick);
+
+        button3.addEventListener('click', handleClick);
+        button3.addEventListener('mouseover', handleMouseOver);
+        button3.addEventListener('mouseout', handleMouseOut);
+        button3.addEventListener('dblclick', handleDoubleClick);
+    </script>
+</body>
+</html>
